@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["types/*"]
+    },
+    "outDir": "lib",
+    "declaration": true //表示将会由 ts 文件自动生成 .d.ts 声明文件，会输出到 lib 目录下。
+  }
+}

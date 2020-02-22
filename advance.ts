@@ -86,8 +86,7 @@ function createArray<T>(num: number, value: T): Array<T> {
 }
 createArray(5, "ycy");
 
-// 声明合并
-//接口合并
+// 声明合并，接口合并
 interface Alarm {
   price: number;
   alert(s: string): string;
@@ -96,7 +95,31 @@ interface Alarm {
   weight: number;
   alert(s: string, n: number): string;
 }
-
-//类
+// 等价于
+interface Alarm {
+  price: number;
+  weight: number;
+  alert(s: string): string;
+  alert(s: string, n: number): string;
+}
 
 //类与接口
+
+//类（class）实现（implements）接口（interface）
+// 举例来说，门是一个类，防盗门是门的子类。如果防盗门有一个报警器的功能，我们可以简单的给防盗门添加一个报警方法。
+//这时候如果有另一个类，车，也有报警器的功能，就可以考虑把报警器提取出来，作为一个接口，防盗门和车都去实现它：
+
+class Door {}
+interface Alarm {
+  alert();
+}
+class safeDoor extends Door implements Alarm {
+  alert() {
+    console.log("SecurityDoor alert");
+  }
+}
+class Car implements Alarm {
+  alert() {
+    console.log("Car alert");
+  }
+}

@@ -33,3 +33,29 @@ declare enum Directions {
     Right
 }
 declare let directions: Directions[];
+declare function createArray<T>(num: number, value: T): Array<T>;
+interface Alarm {
+    price: number;
+    alert(s: string): string;
+}
+interface Alarm {
+    weight: number;
+    alert(s: string, n: number): string;
+}
+interface Alarm {
+    price: number;
+    weight: number;
+    alert(s: string): string;
+    alert(s: string, n: number): string;
+}
+declare class Door {
+}
+interface Alarm {
+    alert(): any;
+}
+declare class safeDoor extends Door implements Alarm {
+    alert(): void;
+}
+declare class Car implements Alarm {
+    alert(): void;
+}

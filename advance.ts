@@ -76,6 +76,27 @@ let directions = [
   Directions.Right
 ];
 
+//泛型
+function createArray<T>(num: number, value: T): Array<T> {
+  let result: T[] = [];
+  for (let index = 0; index < num; index++) {
+    result[index] = value;
+  }
+  return result;
+}
+createArray(5, "ycy");
+
+// 声明合并
+//接口合并
+interface Alarm {
+  price: number;
+  alert(s: string): string;
+}
+interface Alarm {
+  weight: number;
+  alert(s: string, n: number): string;
+}
+
 //类
 
-//泛型
+//类与接口

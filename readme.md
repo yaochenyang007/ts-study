@@ -1,7 +1,9 @@
-### ts 学习笔记
+### 全局安装 npm install -g typescript
 
-#### types 文件夹中用于存放第三方申明文件
+### 运行命令 tsc base.ts
 
-#### base.ts 基础语法
+### types 文件夹中用于存放第三方申明文件
 
-#### advance.ts 进阶语法
+#### base.ts 里为基础语法
+
+#### advance.ts 里为进阶语法
